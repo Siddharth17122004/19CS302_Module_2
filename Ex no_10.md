@@ -1,40 +1,47 @@
-# EX 5 C program to calculate the total marks, average, and percentage of marks obtained in six subjects.
+# EX 10 C program to find the factorial of a given number using a function with arguments and return type.
 ## DATE:
 ## Aim:
-To write a C program to calculate the total marks, average, and percentage of marks obtained in six subjects.
+To write a C program to find the factorial of a given number using a function with arguments and return type.
 
 ## Algorithm:
-1. Start. 
-2. Declare six variable value of type int for marks. 
-3. Prompt the user to enter a value. 
-4. Read the value using scanf. 
-5. Find total and average. 
-6. Print the result 
-7. End.    
+1. Start  
+2. Declare function `factorial(int n)`  
+3. Initialize `fact = 1`  
+4. Loop from `i = 1` to `n`  
+5. Multiply `fact = fact * i`  
+6. Return `fact`  
+7. In `main()`, declare `num`  
+8. Read `num` from user  
+9. Call `factorial(num)` and store in `result`  
+10. Print `result`  
+11. End 
 
 ## Program:
 ```
 #include <stdio.h>
+int factorial(int n)
+{
+    int fact = 1;
+    for (int i = 1; i <= n; ++i)
+    {
+        fact *= i;
+    }
+    return fact;
+}
 int main()
 {
-    int m1, m2, m3, m4, m5, m6;
-    float total, average, percentage;
-    scanf("%d %d %d %d %d %d", &m1, &m2, &m3, &m4, &m5, &m6);
-    total = m1 + m2 + m3 + m4 + m5 + m6;
-    average = total / 6.0;
-    percentage = average;  
-    printf("Total marks = %.2f\n", total);
-    printf("Average marks = %.2f\n", average);
-    printf("Percentage = %.2f\n", percentage);
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    int result = factorial(num);
+    printf("Factorial of %d is %d\n", num, result);
     return 0;
 }
 RegisterNumber:212222060288
 Developed by:Venkatasubramaniam R
-
 ```
 ## Output:
-
-![Screenshot_6-5-2025_11534_training saveetha in](https://github.com/user-attachments/assets/5b55b761-9b55-4160-90bb-bfd3692c1b78)
+![Screenshot 2025-05-06 191334](https://github.com/user-attachments/assets/9f7cc8d2-6f98-4b02-b1b5-177c0a69fa1c)
 
 ## Result:
 Thus the program was executed and the output was verified successfully.
